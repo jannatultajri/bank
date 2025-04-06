@@ -12,11 +12,11 @@
 
 <body>
     <!-- header section start -->
-    <header class="head">
+    <header class="head sticky top-0 ">
         <button class="bt">Blog</button>
-        <div class="flex space-x-3">
+        <div class="flex space-x-3 ">
             <img src="images/logo.png" alt="">
-            <h2 class="text-xl font-bold">Donate Bangladesh</h2>
+            <h2 class="text-xl font-bold ">Donate Bangladesh</h2>
         </div>
         <div class="flex space-x-2">
             <img src="images/coin.png" alt="">
@@ -25,7 +25,7 @@
     </header>
     <!-- header section end -->
     <!-- button section start -->
-    <div class="mb-12 flex justify-center space-x-3">
+    <div id="" class="mb-12 flex justify-center space-x-3 ">
         <button id="btn-1" class="btn btn-lg">Donation</button>
         <button id="btn-2" class="btn btn-lg">History</button>
     </div>
@@ -52,7 +52,20 @@
                     </p>
                     <div class="flex flex-col space-y-2">
                         <input id="withdraw-field" type="number" class="input" placeholder="Write Donation Amount" />
-                        <button id="btn-withdraw" class="btnn">Donate Now</button>
+
+                        <button id="btn-withdraw" class="btnn" onclick="openPopup()">Donate Now</button>
+                        <!--pop up start-->
+                        <div class="container ">
+
+                            <div id="pop" class="popup ">
+                                <h1>Congrates!</h1>
+                                <img src="images/coin.png" alt="">
+                                <p>You Have Donated for Humankind</p>
+                                <h2>successfully</h2>
+                                <button type="button" onclick="closePopup()">Close confirmation</button>
+                            </div>
+                        </div>
+                        <!--pop up start-->
                     </div>
                 </div>
             </div>
@@ -76,7 +89,20 @@
                     </p>
                     <div class="flex flex-col space-y-2">
                         <input id="withdraw-field-1" type="number" class="input" placeholder="Write Donation Amount" />
-                        <button id="btn-withdraw-1" class="btnn">Donate Now</button>
+                        <button id="btn-withdraw-1" class="btnn" onclick="openPopup()">Donate Now</button>
+
+                        <!--pop up start-->
+                        <div class="container ">
+
+                            <div id="pop" class="popup ">
+                                <h1>Congrates!</h1>
+                                <img src="images/coin.png" alt="">
+                                <p>You Have Donated for Humankind</p>
+                                <h2>successfully</h2>
+                                <button type="button" onclick="closePopup()">Close confirmation</button>
+                            </div>
+                        </div>
+                        <!--pop up start-->
                     </div>
                 </div>
             </div>
@@ -102,7 +128,20 @@
                     </p>
                     <div class="flex flex-col space-y-2">
                         <input id="withdraw-field-2" type="number" class="input" placeholder="Write Donation Amount" />
-                        <button id="btn-withdraw-2" class="btnn">Donate Now</button>
+                        <button id="btn-withdraw-2" class="btnn" onclick="openPopup()">Donate Now</button>
+
+                        <!--pop up start-->
+                        <div class="container ">
+
+                            <div id="pop" class="popup ">
+                                <h1>Congrates!</h1>
+                                <img src="images/coin.png" alt="">
+                                <p>You Have Donated for Humankind</p>
+                                <h2>successfully</h2>
+                                <button type="button" onclick="closePopup()">Close confirmation</button>
+                            </div>
+                        </div>
+                        <!--pop up start-->
                     </div>
                 </div>
             </div>
@@ -126,24 +165,28 @@
     </div>
     <!-- Transaction section end -->
     <!-- popup section start -->
-    <div class="container">
+    <script>
+        let popUp = document.getElementById('pop');
 
-        <div id="pop" class="popup">
-            <h1>Congrates!</h1>
-            <img src="images/coin.png" alt="">
-            <p>You Have Donated for Humankind</p>
-            <h2>successfully</h2>
-            <button type="button" onclick="closepopup()">Close confirmation</button>
-        </div>
-    </div>
+        function openPopup() {
+            popUp.classList.add('open-popup');
+        }
+
+        function closePopup() {
+            popUp.classList.remove('open-popup');
+        }
+
+    </script>
     <!-- popup section end -->
 
     <script src="js/donate.js"></script>
     <script src="js/utilities.js"></script>
     <script src="js/features.js"></script>
-    <script src="js/popup.js"></script>
+
     <script src="js/donate1.js"></script>
     <script src="js/donate2.js"></script>
+
+
 
 </body>
 
